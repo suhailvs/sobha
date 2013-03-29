@@ -16,7 +16,7 @@ Create a python-2.6 application
 
     rhc app create -a django -t python-2.6
 
-Add this upstream repo
+Add openshift/django-example upstream repo
 
     cd django
     git remote add upstream -m master git://github.com/openshift/django-example.git
@@ -45,7 +45,7 @@ go to the folder django(created when *rhc app create -a django -t python-2.6* co
 
 	cd django
 
-make changes using your favourate text editor:
+make changes using your favourate text editor. replace the folder *wsgi/openshift* with this repository foler:
 	
 	git add .
 	git commit -a

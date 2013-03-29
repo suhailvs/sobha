@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block header %}
+<div class="jumbotron masthead">
+	<div class="row-fluid">
+		<div class="span2">
+			<img class="logoimg" src="/static/img/logomain.jpg">
+		</div>
+		<div class="span10">
+			<div class="container">				
+				<h1>Sobha Academy</h1>
+				<p>
+Give Education and Upbring the development of poor by providing Free High quality Education, Food and other facilities and bring them top in Society.
+				</p>
+				<p>
+				<a href="/aboutus/" class="btn btn-inverse btn-large" >Know More >></a>
+			</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+	<hr class="soften">
+	<div class="container">
+		<div class="row-fluid">
+      <div class="span4">
+        <img class="someimg" src="/static/img/sobha01.jpg">
+        <h2>By sobha, for poor.</h2>
+        <p>
+Built with high quality infrastructure, will provide a good environment for studies. With clean and hygenic environment.</p>
+			</div>
+			
+      <div class="span4">
+      	<img class="someimg" src="/static/img/sobha02.jpg">
+        <h2>Quality Classroom</h2>
+        <p>
+Every classroom contains balcony for better ventilation. Each teacher will provide and help students one by one to improve their knowledge.</p>
+      </div>
+      
+      <div class="span4">
+        <img class="someimg" src="static/img/sobha03.jpg">
+        <h2>Arts and sports</h2>
+        <p>
+We also provide better teaching for arts, sports and every day we will teach musiq as a subject. So that it will ensure students are good at every aspects of life.	</p>
+			</div>
+    </div>
+	
+	
+	<hr class="soften">
+	<h1>Sobha Academy</h1>
+	
+	<p>
+Sobha Developers Ltd. (SDL) formerly Sobha Developers Private Limited BSE: 532784, NSE: SOBHA is an Indian multinational real estate developer headquartered in Bangalore, India and engaged in the business of construction, development, sale, management and operation of all or any part of townships, housing projects, commercial premises and other related activities. The Company is also engaged in manufacturing activities related to interiors, glazing and metal works and concrete products, which provides backward integration to its turnkey projects. It is primarily focused on residential and contractual projects. The Company executed and handed over 9 residential projects (3.14 million Sq.ft.) and 18 contractual projects (2.08 million Sq.ft.) resulting in an aggregate development of 5.22 million Sq.ft. last year.[4] As of March 31, 2012, the Company has successfully completed 79 residential projects and 209 contractual projects covering an aggregate area of around 51.80 million square feet.[4]
+	</p><p>
+Sobha Developers Limited has the widest backward integration in construction and real estate development business in India that produces almost everything from bricks, interlocking tiles, furniture, interiors, exteriors, glassworks, glazing, to bed mattresses, among many other things that goes into making a comfortable home. Sobha Developers is now a large real estate developer in India with a geographic presence in 22 cities spread across 13 states. Internationally Sobha Developers has significant operations in Oman with a footprint in Dubai
+	</p>
+		
+</div>{% endblock %}
+
