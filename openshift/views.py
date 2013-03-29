@@ -10,7 +10,7 @@ def aboutus(request):
 def admission(request):	
 	return render(request,'pages/admission.html',{'cur_page':'/admission/','nav_items':hnav})
 def develop(request):
-	return render(request,'pages/develop.html',{'cur_page':'/explore/','nav_items':hnav})
+	return render(request,'pages/develop.html',{'cur_page':'/develop/','nav_items':hnav})
 def activities(request):	
 	return render(request,'pages/activities.html',{'cur_page':'/activities/','nav_items':hnav})
 def career(request):	
