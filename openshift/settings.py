@@ -142,6 +142,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_DIR, 'templates'),
+    #os.path.join(PROJECT_DIR, 'contact/templates'),
 )
 
 INSTALLED_APPS = (
@@ -158,6 +159,7 @@ INSTALLED_APPS = (
 	'openshift.subject',
     'openshift.person',
     'openshift.exam',
+    'openshift.contact',
 )
 
 # A sample logging configuration. The only tangible logging

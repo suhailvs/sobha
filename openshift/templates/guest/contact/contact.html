@@ -1,0 +1,56 @@
+{% extends "guest/base.html" %}
+
+{% block header %}
+<header class="jumbotron subhead">
+  <div class="container">
+    <h1>Contact us</h1>
+    <p class="lead">message us and we will replay soon.</p>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<hr class="soften2">
+	
+	
+    
+    <form action="/contactus/" method="post">{% csrf_token %}
+	<fieldset>
+		<legend>Contact sobha academy</legend>
+		
+		{% if form.errors %}
+        <p class="text-error">Please correct the error{{ form.errors|pluralize }} below.</p>
+    	{% endif %}
+    	
+		<div class="control-group{% if form.name.errors %} error{% endif %}">
+			<label class="control-label">Your Name:</label>
+			<input class="span2" name="name" type="text">
+			<span class="help-inline">{{ form.name.errors.0 }}</span>			
+        </div>
+        
+        <div class="control-group{% if form.subject.errors %} error{% endif %}">
+			<label class="control-label">Subject:</label>
+			<input class="span4" name="subject" type="text">
+			<span class="help-inline">{{ form.subject.errors.0 }}</span>			
+        </div>
+        
+		<div class="control-group{% if form.email.errors %} error{% endif %}">
+			<label class="control-label">Your Email: </label>
+			<input class="span3" name="email" type="text">
+			<span class="help-inline">{{ form.email.errors.0 }}</span>			
+        </div>	
+        
+		<div class="control-group{% if form.message.errors %} error{% endif %}">
+			<label class="control-label">Please type message here: </label>
+			<textarea class="span4" name="message"></textarea>
+			<span class="help-inline">{{ form.message.errors.0 }}</span>			
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        
+		
+	</fieldset>
+	</form>
+	
+</div>
+{% endblock %}
