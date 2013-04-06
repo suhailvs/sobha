@@ -1,6 +1,6 @@
-{% extends "guest/base.html" %}
+{% extends "base.html" %}
 
-{% block extralinks %}
+{% block extrahead %}
 <style type="text/css">
       body {
         padding-top: 40px;
@@ -36,11 +36,12 @@
     </style>
 
 {% endblock %}
-{% block mainstuffs %}	
+
+{% block content %}	
     <div class="container">
 	
 	
-      <form class="form-signin" action="/signin/" method="post">{% csrf_token %}
+      <form class="form-signin" action="/sadmin/" method="post">{% csrf_token %}
         <h2 class="form-signin-heading">Please sign in</h2>
 		
 		{% if errors %}
@@ -60,4 +61,6 @@
       </form>
     </div>
  
+{% endblock %}
+{% block footer %}
 {% endblock %}

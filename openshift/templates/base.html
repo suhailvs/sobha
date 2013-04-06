@@ -4,24 +4,36 @@
 	<title>Sobha Academy</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/static/css/bootstrap.css" rel="stylesheet" media="screen">
-	<link href="/static/css/suhail.css" rel="stylesheet">
+	
 	
 	 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		  <script src="/static/js/html5shiv.js"></script>
 		<![endif]-->
 	<link rel="shortcut icon" href="/static/img/favicon.png">
+	{% block extrahead %}	
+	{% endblock %}
 </head>
 <body>
-	{% include "includes/hnav.html" %}
+	{% block navtop %}
+	{% endblock %}
 
 	{% block header %}
 	{% endblock %}		
 	
 	{% block content %}
 	{% endblock %}
-		
-	{% include "includes/footer.html" %}
+
+	{% block footer %}
+	<footer class="footer">
+			<div class="container">
+			<p>Designed and Maintained by <a href="http://github.com/suhailvs"> suhailvs</a>. Many thanks to Python, Django and bootstrap.</p>
+			<p>You can fork this on <a href="http://github.com/suhailvs/sobha/"> github/suhailvs</a>. Please send pull requests.</p>
+			<p>call me: 9495881367 if you want any help</p>
+		</div>
+	</footer>
+	{% endblock %}
+
 	<script src ="/static/js/jquery.js"></script>
 	<script src ="/static/js/bootstrap.min.js"></script>
 </body>

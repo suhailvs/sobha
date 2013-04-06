@@ -6,7 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns('openshift',
  url(r'^admin/', include(admin.site.urls)),
  url(r'^contactus/$','contact.views.contactus'),
- url(r'^student/$','person.views.studentadmin'),
+ url(r'^sadmin/$','person.views.students'),
  )
  
  
@@ -19,5 +19,5 @@ urlpatterns += patterns('openshift.views',
     url(r'^activities/$','menulinks', {'template_name': 'activities.html'}),
     url(r'^career/$','menulinks', {'template_name': 'career.html'}),    
     url(r'^gmaps/$','menulinks', {'template_name': 'gmaps.html'}),   
-    url(r'^signin/$','signin'), 
+    
 )

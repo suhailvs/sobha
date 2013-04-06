@@ -1,31 +1,27 @@
 from django.shortcuts import render
-from openshift import templatehelper
 from django.contrib.auth.models import User
+from django.template import RequestContext
 
-hnav=templatehelper.getmenu()
+def guest_hnav_main(request):
+	hnav=[('/home/','Home'),
+		('/aboutus/','About us'),
+		('/admission/','Admission'),
+		('/develop/','Develop this site'),
+		('/activities/','Activities'),
+		('/career/','Career'),
+		('/contactus/','Contact us'),
+		('/gmaps/','Map of school')]
+
+	return {
+        'nav_items': hnav,
+    }
+
 def menulinks(request,template_name):
-	cur_page='/%s/'%template_name[:-5]	
-	return render(request,'guest/pages/%s'%(template_name,),{'cur_page':cur_page,'nav_items':hnav})
+	cur_page='/%s/'%template_name[:-5]
+	return render(request,'guest/pages/%s'%(template_name,),{'cur_page':cur_page},
+	context_instance=RequestContext(request,processors=[guest_hnav_main]))
 
 
-from django.contrib.auth import authenticate, login
 
-def signin(request):
-	errors=[]
-	if request.method == 'POST':		
-		username = request.POST['username']
-		password = request.POST['password']
-		user = authenticate(username=username, password=password)
-		if user is not None:
-			if user.is_active:
-				login(request, user)
-				# Redirect to a success page.
-				return render(request, 'students/pages/home.html')
-			else:
-				errors.append('disabled account')
-		else:
-			errors.append("The username and password were incorrect.")
-	return render(request, 'guest/pages/signin.html',{'errors': errors})
+
 	    	
-def studentadmin(request):
-	pass
